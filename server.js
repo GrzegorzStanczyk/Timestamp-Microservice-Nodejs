@@ -15,8 +15,8 @@ app.get('/:date', function(req, res) {
   const unix = moment(d).isValid() ? moment(d).unix() : null;
   const natural = moment(d).isValid() ? moment(d).format('MMMM DD, YYYY') : null;
   const json = {
-    'unix': unix,
-    'natural': natural
+    unix,
+    natural
   }
   res.json(json)
 });
